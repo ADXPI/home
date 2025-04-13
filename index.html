@@ -1,19 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ADXPI - Digital Services & Solutions</title>
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="description" content="ADXPI offers comprehensive digital services including web development, marketing, branding, software development, and much more." />
-  </head>
-  <body>
-    
-    <div id="app">
-      <!-- All content will be loaded here -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ADXPI - Digital Service Innovators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      perspective: 1000px;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      transform: rotateX(10deg);
+      animation: float 6s ease-in-out infinite;
+      background: linear-gradient(90deg, #00dbde, #fc00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      max-width: 800px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: rotateX(10deg) translateY(0);
+      }
+      50% {
+        transform: rotateX(10deg) translateY(-20px);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding-top: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .card:hover {
+      transform: scale(1.05) rotateY(3deg);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to ADXPI</h1>
+    <p>Leading Digital Service Provider & Tech Innovator. Crafting the future with technology and creativity.</p>
+  </header>
+
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Web & App Development</h3>
+        <p>Custom-built solutions to meet your digital goals.</p>
+      </div>
+      <div class="card">
+        <h3>Tax Filing</h3>
+        <p>Effortless and accurate tax filing for individuals and businesses.</p>
+      </div>
+      <div class="card">
+        <h3>Company Registration</h3>
+        <p>Start your business journey with hassle-free company registration services.</p>
+      </div>
+      <div class="card">
+        <h3>Music Distribution</h3>
+        <p>Expand your reach through professional music distribution and publishing services.</p>
+      </div>
+      <div class="card">
+        <h3>Legal Services</h3>
+        <p>Expert legal support for all your needs — reliable and fast.</p>
+      </div>
+      <div class="card">
+        <h3>Research & Development</h3>
+        <p>Innovating tomorrow with cutting-edge research in emerging technologies.</p>
+      </div>
     </div>
-    <script type="module" src="./src/main.ts"></script>
-  </body>
+  </section>
+
+  <footer>
+    &copy; 2025 ADXPI. All Rights Reserved.
+  </footer>
+
+  <script>
+    // Add subtle 3D rotation on mouse move over header
+    const header = document.querySelector('header');
+    header.addEventListener('mousemove', (e) => {
+      const { offsetX, offsetY } = e;
+      const { offsetWidth, offsetHeight } = header;
+      const x = (offsetX / offsetWidth - 0.5) * 20;
+      const y = (offsetY / offsetHeight - 0.5) * -20;
+      header.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
+    });
+    header.addEventListener('mouseleave', () => {
+      header.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  </script>
+</body>
 </html>
