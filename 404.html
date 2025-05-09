@@ -1,19 +1,54 @@
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-
-export default function NotFound() {
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white p-5">
-      <motion.div 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-center space-y-4">
-        <h1 className="text-6xl font-bold">404</h1>
-        <p className="text-xl">Oops! Page Not Found.</p>
-        <p className="text-gray-400">The page you are looking for doesn’t exist or has been moved.</p>
-        <Button className="mt-6" onClick={() => window.location.href = '/'}>Go Home</Button>
-      </motion.div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        body {
+            background-color: #1a202c;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 6rem;
+            margin: 0;
+        }
+        p {
+            font-size: 1.25rem;
+            margin: 10px 0;
+            color: #a0aec0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #2d3748;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #4a5568;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>Oops! Page Not Found.</p>
+        <p>The page you are looking for doesn’t exist or has been moved.</p>
+        <a href="/">Go Home</a>
     </div>
-  );
-}
+</body>
+</html>
