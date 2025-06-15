@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Analytics Solutions | ADXPI Technologies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="ADXPI delivers cutting-edge AI and analytics solutions to transform your business. Machine learning, predictive analytics, and data-driven insights.">
+    <meta name="keywords" content="AI solutions, data analytics, machine learning, predictive analytics, business intelligence, ADXPI">
+    <meta name="author" content="ADXPI Technologies">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0066b3;
+            --secondary: #00a9e0;
+            --accent: #ff6a00;
+            --dark: #1a3a5f;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+            --ai-gradient: linear-gradient(135deg, #0066b3 0%, #00a9e0 50%, #1a3a5f 100%);
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary);
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark);
+        }
+
+        /* AI Hero Section */
+        .ai-hero {
+            background: linear-gradient(rgba(26, 58, 95, 0.85), rgba(26, 58, 95, 0.95)), url('https://images.unsplash.com/photo-1677442135722-5f5d4a1cac7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 100px;
+        }
+
+        .ai-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .ai-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .ai-hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* AI Overview Section */
+        .ai-overview {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+
+        .ai-overview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .ai-overview-text h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--dark);
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .ai-overview-text h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+
+        .ai-overview-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .ai-overview-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            height: auto;
+        }
+
+        /* AI Services Section */
+        .ai-services {
+            padding: 100px 0;
+            background: var(--ai-gradient);
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: white;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 35px 30px;
+            text-align: center;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 32px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* AI Process Section */
+        .ai-process {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .process-step {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .process-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .process-step h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        /* AI Benefits Section */
+        .ai-benefits {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        /* AI Case Studies */
+        .ai-cases {
+            padding: 100px 0;
+            background: var(--dark);
+            color: white;
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .case-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .case-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .case-content {
+            padding: 25px;
+        }
+
+        .case-content h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .case-content p {
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* CTA Section */
+        .ai-cta {
+            padding: 100px 0;
+            background: linear-gradient(rgba(26, 58, 95, 0.9), rgba(26, 58, 95, 0.95)), url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') no-repeat center center/cover;
+            text-align: center;
+            color: white;
+        }
+
+        .ai-cta h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 20px;
+        }
+
+        .ai-cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+            font-size: 16px;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .ai-overview-content {
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background-color: white;
+                width: 280px;
+                height: calc(100vh - 70px);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                padding: 40px 0;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 30px;
+            }
+            
+            .nav-menu li a {
+                font-size: 18px;
+            }
+            
+            .ai-hero {
+                height: auto;
+                min-height: 70vh;
+                padding: 100px 0 60px;
+            }
+            
+            .ai-overview-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .ai-overview-text h2::after {
+                left: 0;
+                transform: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .ai-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .ai-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .service-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>ADX<span>PI</span></h1>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#industries">Industries</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn" id="ctaBtn">Get Started</a>
+        </div>
+    </header>
+
+    <!-- AI Hero Section -->
+    <section class="ai-hero">
+        <div class="container ai-hero-content">
+            <h1>AI & Analytics Solutions</h1>
+            <p>Transform your business with data-driven intelligence, predictive insights, and machine learning innovation</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn">Explore Solutions</a>
+                <a href="#contact" class="btn btn-outline">Schedule Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Overview Section -->
+    <section class="ai-overview" id="overview">
+        <div class="container">
+            <div class="ai-overview-content">
+                <div class="ai-overview-text">
+                    <h2>Unlock the Power of Your Data</h2>
+                    <p>In today's digital landscape, data is your most valuable asset. ADXPI's AI and Analytics solutions transform complex data into actionable insights, giving you the competitive edge to drive innovation, optimize operations, and accelerate growth.</p>
+                    <p>Our team of data scientists, AI specialists, and industry experts work with you to implement tailored solutions that address your unique business challenges. From predictive analytics to machine learning models, we help you harness the full potential of artificial intelligence.</p>
+                    <p>With over a decade of experience in delivering transformative AI solutions across industries, ADXPI brings deep technical expertise combined with strategic business understanding to every engagement.</p>
+                </div>
+                <div class="ai-overview-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80" alt="AI Analytics Visualization">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Services Section -->
+    <section class="ai-services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our AI & Analytics Services</h2>
+                <p>Comprehensive solutions designed to drive innovation and business value</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Predictive Analytics</h3>
+                    <p>Forecast trends, identify opportunities, and mitigate risks with advanced predictive modeling techniques.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Business Intelligence</h3>
+                    <p>Transform raw data into actionable insights with intuitive dashboards and reporting tools.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Machine Learning</h3>
+                    <p>Implement custom ML models to automate processes, enhance decision-making, and uncover hidden patterns.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Natural Language Processing</h3>
+                    <p>Extract insights from unstructured text data and enhance customer interactions with NLP solutions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Computer Vision</h3>
+                    <p>Implement image and video recognition systems for quality control, security, and automation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>AI Integration</h3>
+                    <p>Seamlessly integrate AI capabilities into your existing systems and workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Process Section -->
+    <section class="ai-process">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our AI Implementation Process</h2>
+                <p>A structured approach to delivering measurable AI solutions</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="process-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Discovery & Assessment</h3>
+                    <p>Understand business objectives, data landscape, and define success metrics</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="process-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Data Preparation</h3>
+                    <p>Collect, clean, and prepare data for modeling and analysis</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="process-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Model Development</h3>
+                    <p>Design, build, and train custom AI models for your specific use cases</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="process-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Deployment & Integration</h3>
+                    <p>Implement solutions into your environment with minimal disruption</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="process-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Optimization & Scaling</h3>
+                    <p>Continuously improve models and expand capabilities across the organization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Benefits Section -->
+    <section class="ai-benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>Benefits of AI & Analytics</h2>
+                <p>How our solutions transform businesses and drive competitive advantage</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Enhanced Decision Making</h3>
+                    <p>Make data-driven decisions with real-time insights and predictive analytics that reduce uncertainty and improve outcomes.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Operational Efficiency</h3>
+                    <p>Automate routine processes, optimize resource allocation, and reduce operational costs through intelligent automation.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Customer Experience</h3>
+                    <p>Personalize interactions, predict customer needs, and deliver exceptional experiences across all touchpoints.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation Acceleration</h3>
+                    <p>Uncover new opportunities, develop innovative products, and enter new markets with data-driven insights.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Risk Mitigation</h3>
+                    <p>Identify potential threats, detect anomalies, and prevent fraud with advanced AI monitoring systems.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Competitive Advantage</h3>
+                    <p>Gain market insights, anticipate trends, and outperform competitors with superior data capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Case Studies -->
+    <section class="ai-cases">
+        <div class="container">
+            <div class="section-title">
+                <h2>AI Success Stories</h2>
+                <p>Real-world examples of transformative AI implementations</p>
+            </div>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80')"></div>
+                    <div class="case-content">
+                        <h3>Retail Sales Forecasting</h3>
+                        <p>Implemented predictive analytics for a leading retailer, improving sales forecast accuracy by 37% and reducing inventory costs by 22%.</p>
+                        <a href="#" class="btn btn-outline" style="border-color: white; color: white;">Read Case Study</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80')"></div>
+                    <div class="case-content">
+                        <h3>Manufacturing Quality Control</h3>
+                        <p>Deployed computer vision system that reduced defect rates by 45% and improved production efficiency by 28% for an automotive manufacturer.</p>
+                        <a href="#" class="btn btn-outline" style="border-color: white; color: white;">Read Case Study</a>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80')"></div>
+                    <div class="case-content">
+                        <h3>Healthcare Predictive Analytics</h3>
+                        <p>Developed patient risk prediction models for a hospital network, reducing readmission rates by 32% and saving $4.2M annually.</p>
+                        <a href="#" class="btn btn-outline" style="border-color: white; color: white;">Read Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="ai-cta" id="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Business with AI?</h2>
+            <p>Schedule a consultation with our AI experts to discover how we can help you harness the power of artificial intelligence and analytics to drive innovation and growth.</p>
+            <a href="index.html#contact" class="btn">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h1 style="color: white; margin-bottom: 20px; font-size: 1.8rem;">ADX<span style="color: var(--accent);">PI</span></h1>
+                    <p style="font-size: 0.9rem;">Delivering excellence in IT services and digital transformation solutions since 2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#industries">Industries</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>AI Services</h4>
+                    <ul>
+                        <li><a href="#">Predictive Analytics</a></li>
+                        <li><a href="#">Machine Learning</a></li>
+                        <li><a href="#">Business Intelligence</a></li>
+                        <li><a href="#">Natural Language Processing</a></li>
+                        <li><a href="#">AI Strategy Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Innovation Plaza, SF</li>
+                        <li><i class="fas fa-phone"></i> +1 (800) 555-1234</li>
+                        <li><i class="fas fa-envelope"></i> info@adxpi.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ADXPI Technologies | <a href="privacy.html" style="color: #aaa;">Privacy Policy</a> | <a href="terms.html" style="color: #aaa;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'white';
+            }
+        });
+
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.service-card, .process-step, .benefit-card, .case-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Set initial state for animated elements
+        document.querySelectorAll('.service-card, .process-step, .benefit-card, .case-card').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+
+        // Trigger animations on load and scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>
