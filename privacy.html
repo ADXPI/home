@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | ADXPI Technologies</title>
+    <meta name="description" content="Read ADXPI's Privacy Policy to understand how we collect, use, and protect your personal information.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0066b3;
+            --secondary: #00a9e0;
+            --accent: #ff6a00;
+            --dark: #1a3a5f;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary);
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark);
+        }
+
+        /* Policy Hero Section */
+        .policy-hero {
+            background: linear-gradient(rgba(26, 58, 95, 0.8), rgba(26, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            padding: 180px 0 100px;
+            text-align: center;
+            color: white;
+        }
+
+        .policy-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .policy-hero p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Policy Content */
+        .policy-content {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .policy-section {
+            margin-bottom: 60px;
+        }
+
+        .policy-section h2 {
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .policy-section h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+
+        .policy-section p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .policy-section ul {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .policy-section ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .policy-section ul li::before {
+            content: '•';
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .policy-section h3 {
+            color: var(--dark);
+            margin: 25px 0 15px;
+            font-size: 1.3rem;
+        }
+
+        .policy-section .highlight {
+            background-color: rgba(0, 106, 179, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .last-updated {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 40px;
+            text-align: center;
+            border-top: 3px solid var(--accent);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .contact-section p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 70px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background-color: white;
+                width: 280px;
+                height: calc(100vh - 70px);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                padding: 40px 0;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 5px 15px;
+            }
+            
+            .policy-hero {
+                padding: 150px 0 80px;
+            }
+            
+            .policy-content, .contact-section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .policy-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .policy-section .highlight {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>ADX<span>PI</span></h1>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="privacy.html" class="active">Privacy</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#contact" class="btn">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="policy-hero">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us. This policy explains how ADXPI collects, uses, and protects your personal information.</p>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <section class="policy-content">
+        <div class="container">
+            <div class="policy-section">
+                <h2>Introduction</h2>
+                <p>ADXPI Technologies ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <a href="https://www.adxpi.com">www.adxpi.com</a> or use our services.</p>
+                <p>Please read this privacy policy carefully. By accessing or using our website, you agree to be bound by the terms described herein and all terms incorporated by reference. If you do not agree to all of these terms, do not use our website.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>Information We Collect</h2>
+                <p>We may collect information about you in a variety of ways. The information we may collect on the website includes:</p>
+                
+                <h3>Personal Data</h3>
+                <p>Personally identifiable information, such as your name, email address, phone number, and company information, that you voluntarily give to us when you register with the website or when you choose to participate in various activities related to the website, such as online chat and message boards.</p>
+                
+                <h3>Derivative Data</h3>
+                <p>Information our servers automatically collect when you access the website, such as your IP address, browser type, operating system, access times, and the pages you have viewed directly before and after accessing the website.</p>
+                
+                <h3>Financial Data</h3>
+                <p>Financial information, such as data related to your payment method (e.g., valid credit card number, card brand, expiration date) that we may collect when you purchase, order, return, exchange, or request information about our services from the website.</p>
+                
+                <div class="highlight">
+                    <p><strong>Note:</strong> We do not store your financial information on our servers. All financial transactions are processed through secure third-party payment processors.</p>
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2>How We Use Your Information</h2>
+                <p>We use the information we collect about you for various purposes:</p>
+                <ul>
+                    <li>To provide, operate, and maintain our website and services</li>
+                    <li>To improve, personalize, and expand our website and services</li>
+                    <li>To understand and analyze how you use our website and services</li>
+                    <li>To develop new products, services, features, and functionality</li>
+                    <li>To communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes</li>
+                    <li>To process your transactions and manage your orders</li>
+                    <li>To find and prevent fraud</li>
+                    <li>For compliance purposes, including enforcing our Terms of Service, or other legal rights, or as may be required by applicable laws and regulations or requested by any judicial process or governmental agency</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>Sharing Your Information</h2>
+                <p>We may share information we have collected about you in certain situations:</p>
+                
+                <h3>With Service Providers</h3>
+                <p>We may share your information with third parties that perform services for us or on our behalf, including payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.</p>
+                
+                <h3>For Business Transfers</h3>
+                <p>We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</p>
+                
+                <h3>With Business Partners</h3>
+                <p>We may share your information with our business partners to offer you certain products, services, or promotions.</p>
+                
+                <h3>With Your Consent</h3>
+                <p>We may disclose your personal information for any other purpose with your consent.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>Data Security</h2>
+                <p>We implement reasonable security measures designed to protect your information from accidental loss and from unauthorized access, use, alteration, and disclosure. The safety and security of your information also depends on you.</p>
+                <p>Unfortunately, the transmission of information via the internet is not completely secure. Although we do our best to protect your personal information, we cannot guarantee the security of your personal information transmitted to our website. Any transmission of personal information is at your own risk.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>Your Rights</h2>
+                <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+                <ul>
+                    <li><strong>Access:</strong> You may request access to your personal information that we collect.</li>
+                    <li><strong>Correction:</strong> You may request that we correct or update your personal information.</li>
+                    <li><strong>Deletion:</strong> You may request that we delete your personal information.</li>
+                    <li><strong>Objection:</strong> You may object to our processing of your personal information.</li>
+                    <li><strong>Restriction:</strong> You may request that we restrict processing of your personal information.</li>
+                    <li><strong>Portability:</strong> You may request a copy of your personal information in a structured, commonly used format.</li>
+                </ul>
+                <p>To exercise any of these rights, please contact us using the information provided below.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>Cookies and Tracking Technologies</h2>
+                <p>We may use cookies, web beacons, tracking pixels, and other tracking technologies on the website to help customize the website and improve your experience.</p>
+                <p>Most web browsers are set to accept cookies by default. If you prefer, you can usually choose to set your browser to remove or reject browser cookies. Please note that if you choose to remove or reject cookies, this could affect the availability and functionality of the website.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>Changes to This Policy</h2>
+                <p>We may update this privacy policy from time to time. The updated version will be indicated by an updated "Revised" date and the updated version will be effective as soon as it is accessible. We encourage you to review this privacy policy frequently to be informed of how we are protecting your information.</p>
+            </div>
+
+            <div class="last-updated">
+                <p><strong>Last Updated:</strong> October 15, 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have questions or concerns about our Privacy Policy or our data practices, please contact us:</p>
+            <div style="margin-top: 30px;">
+                <a href="mailto:privacy@adxpi.com" class="btn" style="margin-right: 10px;">
+                    <i class="fas fa-envelope"></i> privacy@adxpi.com
+                </a>
+                <a href="tel:+18005551234" class="btn btn-outline" style="background: transparent; border-color: var(--primary); color: var(--primary);">
+                    <i class="fas fa-phone"></i> +1 (800) 555-1234
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h1 style="color: white; margin-bottom: 20px; font-size: 1.8rem;">ADX<span style="color: var(--accent);">PI</span></h1>
+                    <p style="font-size: 0.9rem;">Delivering excellence in IT services and digital transformation solutions since 2010.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/adxpi" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/adxpi" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/adxpi" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/adxpi" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#industries">Industries</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="compliance.html">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Subscribe</h4>
+                    <p style="font-size: 0.9rem;">Stay updated with our latest insights and innovations</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; border-radius: 4px; border: none; margin-top: 10px; font-size: 0.9rem;">
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%; margin-top: 10px; padding: 10px;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ADXPI Technologies. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'white';
+            }
+        });
+
+        // Set active link
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
