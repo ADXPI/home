@@ -933,6 +933,8 @@
                         <div class="form-group">
 
    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+
+         <input type="hidden" name="redirect" value="https://adxpi.com/thanks">
                   
             
                     <input type="hidden" name="access_key" value="fc853629-52d5-4f7c-822f-3f38590c034c">
@@ -1051,16 +1053,7 @@
             }
         });
 
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for your message! We will contact you soon.');
-                contactForm.reset();
-            });
-        }
-        
+     
         // Testimonial rotation
         const testimonials = [
             {
