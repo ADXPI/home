@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | ADXPI Technologies</title>
+    <meta name="description" content="Review ADXPI's Terms of Service to understand the rules and guidelines for using our website and services.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0066b3;
+            --secondary: #00a9e0;
+            --accent: #ff6a00;
+            --dark: #1a3a5f;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary);
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: button;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark);
+        }
+
+        /* Terms Hero Section */
+        .terms-hero {
+            background: linear-gradient(rgba(26, 58, 95, 0.8), rgba(26, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            padding: 180px 0 100px;
+            text-align: center;
+            color: white;
+        }
+
+        .terms-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .terms-hero p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Terms Content */
+        .terms-content {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .terms-section {
+            margin-bottom: 60px;
+        }
+
+        .terms-section h2 {
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .terms-section h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+
+        .terms-section p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .terms-section ul, .terms-section ol {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .terms-section ul li, .terms-section ol li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .terms-section ul li::before {
+            content: '•';
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .terms-section ol {
+            counter-reset: item;
+        }
+
+        .terms-section ol li {
+            counter-increment: item;
+            padding-left: 25px;
+        }
+
+        .terms-section ol li::before {
+            content: counter(item) ".";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .terms-section h3 {
+            color: var(--dark);
+            margin: 25px 0 15px;
+            font-size: 1.3rem;
+        }
+
+        .terms-section .highlight {
+            background-color: rgba(0, 106, 179, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+            font-style: italic;
+        }
+
+        .last-updated {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 40px;
+            text-align: center;
+            border-top: 3px solid var(--accent);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: var(--dark);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .contact-section p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 70px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            z-index: 1001;
+            position: relative;
+            color: var(--dark);
+            background: transparent;
+        }
+            
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                flex-direction: column;
+                background-color: white;
+                width: 280px;
+                height: 100vh;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                padding: 100px 30px 30px;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
+            .terms-hero {
+                padding: 150px 0 80px;
+            }
+            
+            .terms-content, .contact-section {
+                padding: 60px 0;
+            }
+
+            .header-container {
+                position: relative;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .terms-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .terms-section .highlight {
+                padding: 15px;
+            }
+
+            .nav-menu {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>ADX<span>PI</span></h1>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html" class="active">Terms</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#contact" class="btn">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="terms-hero">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Please read these terms carefully before using our website and services.</p>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="terms-content">
+        <div class="container">
+            <div class="terms-section">
+                <h2>Introduction</h2>
+                <p>These Terms of Service ("Terms") govern your access to and use of the ADXPI Technologies ("ADXPI", "we", "us", or "our") website, products, and services (collectively, the "Services"). By accessing or using our Services, you agree to be bound by these Terms and our Privacy Policy.</p>
+                <p>These Terms apply to all visitors, users, and others who access or use the Services. If you are using the Services on behalf of an organization, you are agreeing to these Terms for that organization and representing that you have the authority to bind that organization to these Terms.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>Acceptance of Terms</h2>
+                <p>By accessing, browsing, or otherwise using the Services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to all of these Terms, you may not access or use the Services.</p>
+                
+                <div class="highlight">
+                    <p><strong>Note:</strong> We may modify these Terms at any time. When we do, we will revise the "last updated" date at the bottom of these Terms. It is your responsibility to review these Terms periodically for changes.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>Account Registration</h2>
+                <p>To access certain features of the Services, you may be required to register for an account. When registering, you agree to:</p>
+                <ol>
+                    <li>Provide accurate, current, and complete information as prompted by the registration form</li>
+                    <li>Maintain and promptly update your information to keep it accurate, current, and complete</li>
+                    <li>Maintain the security of your password and accept all risks of unauthorized access to your account</li>
+                    <li>Notify us immediately if you discover or suspect any security breaches related to the Services</li>
+                    <li>Take responsibility for all activities that occur under your account</li>
+                </ol>
+            </div>
+
+            <div class="terms-section">
+                <h2>Use of Services</h2>
+                <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, non-sublicensable license to access and use the Services for your personal or internal business purposes.</p>
+                
+                <h3>Prohibited Activities</h3>
+                <p>You agree not to engage in any of the following prohibited activities:</p>
+                <ul>
+                    <li>Copying, distributing, or disclosing any part of the Services in any medium</li>
+                    <li>Using any automated system to access the Services in a manner that sends more request messages than a human could reasonably produce</li>
+                    <li>Transmitting spam, chain letters, or other unsolicited email</li>
+                    <li>Attempting to interfere with, compromise the system integrity or security, or decipher any transmissions to or from the servers running the Services</li>
+                    <li>Taking any action that imposes an unreasonable load on our infrastructure</li>
+                    <li>Uploading invalid data, viruses, worms, or other software agents</li>
+                    <li>Collecting or harvesting any personally identifiable information from the Services</li>
+                    <li>Using the Services for any illegal purpose or in violation of any laws</li>
+                    <li>Violating the intellectual property rights of others</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>Intellectual Property Rights</h2>
+                <p>The Services and all materials therein or transferred thereby, including software, images, text, graphics, logos, patents, trademarks, service marks, copyrights, and all related intellectual property rights, are the exclusive property of ADXPI and its licensors.</p>
+                <p>Except as expressly provided herein, nothing in these Terms shall be deemed to create a license in or under any such intellectual property rights, and you agree not to sell, license, rent, modify, distribute, copy, reproduce, transmit, publicly display, publicly perform, publish, adapt, edit or create derivative works from any ADXPI materials.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>User Content</h2>
+                <p>You retain ownership of any content you submit, post, display, or otherwise make available on or through the Services ("User Content"). By making any User Content available through the Services, you grant to ADXPI a non-exclusive, transferable, worldwide, royalty-free license, with the right to sublicense, to use, copy, modify, create derivative works based upon, distribute, publicly display, and publicly perform your User Content in connection with operating and providing the Services.</p>
+                <p>You are solely responsible for all your User Content. You represent and warrant that you own all your User Content or you have all rights necessary to grant us the license rights in your User Content under these Terms.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>Termination</h2>
+                <p>We may terminate or suspend your access to all or part of the Services, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms.</p>
+                <p>Upon termination, your right to use the Services will immediately cease. All provisions of these Terms which by their nature should survive termination shall survive termination, including without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>Disclaimers</h2>
+                <p>Your use of the services is at your sole risk. The services are provided on an "as is" and "as available" basis. ADXPI expressly disclaims all warranties of any kind, whether express or implied, including, but not limited to the implied warranties of merchantability, fitness for a particular purpose and non-infringement.</p>
+                <p>ADXPI makes no warranty that (i) the services will meet your requirements, (ii) the services will be uninterrupted, timely, secure, or error-free, (iii) the results that may be obtained from the use of the services will be accurate or reliable, or (iv) the quality of any products, services, information, or other material purchased or obtained by you through the services will meet your expectations.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>Limitation of Liability</h2>
+                <p>To the maximum extent permitted by applicable law, in no event shall ADXPI, its affiliates, directors, employees, or licensors be liable for any indirect, punitive, incidental, special, consequential or exemplary damages, including without limitation damages for loss of profits, goodwill, use, data or other intangible losses, arising out of or relating to the use of, or inability to use, the services.</p>
+                <p>Under no circumstances will ADXPI be responsible for any damage, loss or injury resulting from hacking, tampering or other unauthorized access or use of the services or your account or the information contained therein.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>Governing Law</h2>
+                <p>These Terms shall be governed and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law provisions.</p>
+                <p>You agree to submit to the personal jurisdiction of the courts located within San Francisco County, California for the purpose of litigating all such claims or disputes.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>Changes to Terms</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                <p>By continuing to access or use our Services after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Services.</p>
+            </div>
+
+            <div class="last-updated">
+                <p><strong>Last Updated:</strong> October 15, 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Questions About Our Terms?</h2>
+            <p>If you have any questions or concerns about our Terms of Service, please contact us:</p>
+            <div style="margin-top: 30px;">
+                <a href="mailto:legal@adxpi.com" class="btn" style="margin-right: 10px;">
+                    <i class="fas fa-envelope"></i> legal@adxpi.com
+                </a>
+                <a href="tel:+18005551234" class="btn" style="background: transparent; border: 2px solid var(--primary); color: var(--primary);">
+                    <i class="fas fa-phone"></i> +1 (800) 555-1234
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h1 style="color: white; margin-bottom: 20px; font-size: 1.8rem;">ADX<span style="color: var(--accent);">PI</span></h1>
+                    <p style="font-size: 0.9rem;">Delivering excellence in IT services and digital transformation solutions since 2010.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/adxpi" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/adxpi" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/adxpi" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/adxpi" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#industries">Industries</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="active">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="compliance.html">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Subscribe</h4>
+                    <p style="font-size: 0.9rem;">Stay updated with our latest insights and innovations</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; border-radius: 4px; border: none; margin-top: 10px; font-size: 0.9rem;">
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%; margin-top: 10px; padding: 10px;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ADXPI Technologies. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'white';
+            }
+        });
+
+        // Set active link
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
