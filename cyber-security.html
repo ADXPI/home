@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Solutions | ADXPI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0066b3;
+            --secondary: #00a9e0;
+            --accent: #ff6a00;
+            --dark: #1a3a5f;
+            --dark-bg: #0c1a2d;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #fff;
+            line-height: 1.6;
+            background-color: var(--dark-bg);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(12, 26, 45, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(0, 169, 224, 0.2);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            color: var(--secondary);
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--accent);
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #ff8533;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 106, 0, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+        }
+
+        /* Hero Section for Cybersecurity */
+        .security-hero {
+            background: linear-gradient(rgba(12, 26, 45, 0.9), rgba(12, 26, 45, 0.95)), url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .security-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .security-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .security-hero p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #ddd;
+        }
+
+        .cyber-stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 169, 224, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            min-width: 180px;
+            backdrop-filter: blur(5px);
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: #ddd;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title p {
+            color: #bbb;
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+        }
+
+        /* Security Services Section */
+        .security-services {
+            background: linear-gradient(to bottom, var(--dark-bg), #0a1423);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 169, 224, 0.2);
+            border-radius: 10px;
+            padding: 40px 30px;
+            transition: var(--transition);
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(255, 106, 0, 0.2);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 106, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--accent);
+            font-size: 32px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #ddd;
+        }
+
+        .service-card ul {
+            text-align: left;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            color: #bbb;
+        }
+
+        .service-card ul li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* Security Approach Section */
+        .security-approach {
+            background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            position: relative;
+        }
+
+        .security-approach::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 20, 35, 0.9);
+        }
+
+        .approach-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step {
+            background: rgba(26, 58, 95, 0.6);
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+            border: 1px solid rgba(0, 169, 224, 0.3);
+            transition: var(--transition);
+        }
+
+        .step:hover {
+            background: rgba(26, 58, 95, 0.8);
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .step h3 {
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .step h3 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        /* Threat Protection Section */
+        .threat-protection {
+            background: linear-gradient(to bottom, #0a1423, var(--dark-bg));
+        }
+
+        .threat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .threat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 106, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        .threat-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .threat-icon {
+            font-size: 48px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .threat-card h3 {
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        /* Case Studies Section */
+        .case-studies {
+            background: linear-gradient(to bottom, var(--dark-bg), #081220);
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .case-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 169, 224, 0.2);
+        }
+
+        .case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 106, 0, 0.2);
+            border-color: var(--accent);
+        }
+
+        .case-content {
+            padding: 30px;
+        }
+
+        .case-content .industry {
+            display: inline-block;
+            background: rgba(255, 106, 0, 0.2);
+            color: var(--accent);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .case-content h3 {
+            margin-bottom: 15px;
+            color: #fff;
+            font-size: 1.3rem;
+        }
+
+        .case-content .results {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .case-content .results h4 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .case-content .results ul {
+            padding-left: 20px;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        .case-content .results li {
+            margin-bottom: 8px;
+        }
+
+        /* CTA Section */
+        .security-cta {
+            background: linear-gradient(rgba(255, 106, 0, 0.8), rgba(255, 106, 0, 0.9)), url('https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .security-cta h2 {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .security-cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #081220;
+            color: white;
+            padding: 80px 0 30px;
+            border-top: 1px solid rgba(0, 169, 224, 0.2);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+            color: #fff;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #777;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .services-grid, .approach-steps, .threat-grid, .case-grid {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background-color: rgba(12, 26, 45, 0.95);
+                width: 280px;
+                height: calc(100vh - 70px);
+                padding: 40px 0;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 30px;
+            }
+            
+            .nav-menu li a {
+                font-size: 18px;
+            }
+            
+            .security-hero {
+                height: auto;
+                min-height: 90vh;
+                padding: 120px 0 60px;
+            }
+            
+            .cyber-stats {
+                gap: 15px;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .service-card, .step, .threat-card, .case-card {
+                padding: 25px 20px;
+            }
+            
+            .stat-item {
+                width: 100%;
+            }
+            
+            .security-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>ADX<span>PI</span></h1>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#approach">Approach</a></li>
+                    <li><a href="#threats">Threat Protection</a></li>
+                    <li><a href="#casestudies">Case Studies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn" id="ctaBtn">Get Protected</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="security-hero">
+        <div class="container security-hero-content">
+            <h1>Advanced Cybersecurity Solutions for the Digital Age</h1>
+            <p>Protect your business from evolving cyber threats with our comprehensive security services and expert defense strategies.</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn">Explore Security Services</a>
+                <a href="#contact" class="btn btn-outline">Free Security Audit</a>
+            </div>
+            
+            <div class="cyber-stats">
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Security Monitoring</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.99%</h3>
+                    <p>Threat Detection Rate</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Protected Businesses</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15min</h3>
+                    <p>Average Response Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Services Section -->
+    <section class="section security-services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cybersecurity Services</h2>
+                <p>Comprehensive protection for your digital assets and infrastructure</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Managed Security Services</h3>
+                    <p>24/7 monitoring, threat detection, and incident response by our security experts.</p>
+                    <ul>
+                        <li>Continuous security monitoring</li>
+                        <li>Threat intelligence and analysis</li>
+                        <li>Incident response management</li>
+                        <li>Vulnerability management</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-lock"></i>
+                    </div>
+                    <h3>Identity & Access Management</h3>
+                    <p>Secure access control and authentication solutions for your organization.</p>
+                    <ul>
+                        <li>Multi-factor authentication</li>
+                        <li>Privileged access management</li>
+                        <li>Single sign-on solutions</li>
+                        <li>Identity governance</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Data Protection & Encryption</h3>
+                    <p>Safeguard sensitive data with advanced encryption and protection strategies.</p>
+                    <ul>
+                        <li>Data classification and discovery</li>
+                        <li>End-to-end encryption</li>
+                        <li>Data loss prevention</li>
+                        <li>Cloud data security</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Security</h3>
+                    <p>Protect your network infrastructure from external and internal threats.</p>
+                    <ul>
+                        <li>Firewall management</li>
+                        <li>Intrusion detection & prevention</li>
+                        <li>VPN solutions</li>
+                        <li>Network segmentation</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Approach Section -->
+    <section class="section security-approach" id="approach">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Security Approach</h2>
+                <p>A proactive and comprehensive methodology to cybersecurity</p>
+            </div>
+            <div class="approach-steps">
+                <div class="step">
+                    <h3><i class="fas fa-search"></i> Assess</h3>
+                    <p>Comprehensive security assessment to identify vulnerabilities, risks, and compliance gaps.</p>
+                </div>
+                <div class="step">
+                    <h3><i class="fas fa-shield-alt"></i> Protect</h3>
+                    <p>Implementation of security controls and technologies to safeguard your assets.</p>
+                </div>
+                <div class="step">
+                    <h3><i class="fas fa-eye"></i> Detect</h3>
+                    <p>Continuous monitoring and threat detection to identify potential security incidents.</p>
+                </div>
+                <div class="step">
+                    <h3><i class="fas fa-bolt"></i> Respond</h3>
+                    <p>Rapid incident response to contain, investigate, and remediate security events.</p>
+                </div>
+                <div class="step">
+                    <h3><i class="fas fa-sync-alt"></i> Recover</h3>
+                    <p>Business continuity and disaster recovery planning to restore operations.</p>
+                </div>
+                <div class="step">
+                    <h3><i class="fas fa-chart-line"></i> Optimize</h3>
+                    <p>Continuous improvement of security posture through analysis and enhancement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Threat Protection Section -->
+    <section class="section threat-protection" id="threats">
+        <div class="container">
+            <div class="section-title">
+                <h2>Advanced Threat Protection</h2>
+                <p>Defending against the evolving threat landscape</p>
+            </div>
+            <div class="threat-grid">
+                <div class="threat-card">
+                    <div class="threat-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Malware Protection</h3>
+                    <p>Advanced defense against viruses, ransomware, spyware, and other malicious software.</p>
+                </div>
+                <div class="threat-card">
+                    <div class="threat-icon">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <h3>Phishing Defense</h3>
+                    <p>Protection against social engineering attacks and fraudulent communication attempts.</p>
+                </div>
+                <div class="threat-card">
+                    <div class="threat-icon">
+                        <i class="fas fa-skull"></i>
+                    </div>
+                    <h3>Zero-Day Threats</h3>
+                    <p>Proactive detection and mitigation of previously unknown vulnerabilities and exploits.</p>
+                </div>
+                <div class="threat-card">
+                    <div class="threat-icon">
+                        <i class="fas fa-cloud-download-alt"></i>
+                    </div>
+                    <h3>Cloud Security</h3>
+                    <p>Comprehensive protection for cloud infrastructure, applications, and data.</p>
+                </div>
+                <div class="threat-card">
+                    <div class="threat-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Endpoint Security</h3>
+                    <p>Protection for all devices accessing your network, including remote and mobile devices.</p>
+                </div>
+                <div class="threat-card">
+                    <div class="threat-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Breach Prevention</h3>
+                    <p>Strategies and technologies to prevent unauthorized access to sensitive information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="section case-studies" id="casestudies">
+        <div class="container">
+            <div class="section-title">
+                <h2>Security Success Stories</h2>
+                <p>How we've protected organizations from cyber threats</p>
+            </div>
+            <div class="case-grid">
+                <div class="case-card">
+                    <div class="case-content">
+                        <span class="industry">Financial Services</span>
+                        <h3>Banking Security Transformation</h3>
+                        <p>Comprehensive security overhaul for a multinational bank with assets over $50B.</p>
+                        <div class="results">
+                            <h4>Security Improvements:</h4>
+                            <ul>
+                                <li>Prevented $15M in potential fraud</li>
+                                <li>Reduced security incidents by 92%</li>
+                                <li>Achieved regulatory compliance</li>
+                                <li>24/7 threat monitoring implemented</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-content">
+                        <span class="industry">Healthcare</span>
+                        <h3>Hospital Network Protection</h3>
+                        <p>Securing patient data and medical systems for a network of 22 hospitals.</p>
+                        <div class="results">
+                            <h4>Security Improvements:</h4>
+                            <ul>
+                                <li>HIPAA compliance achieved</li>
+                                <li>Ransomware attack prevented</li>
+                                <li>99.99% system uptime</li>
+                                <li>Secure remote access for staff</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-content">
+                        <span class="industry">E-commerce</span>
+                        <h3>E-commerce Platform Security</h3>
+                        <p>Protecting customer data and payment systems for a leading online retailer.</p>
+                        <div class="results">
+                            <h4>Security Improvements:</h4>
+                            <ul>
+                                <li>PCI DSS compliance maintained</li>
+                                <li>Zero data breaches since implementation</li>
+                                <li>Automated threat detection</li>
+                                <li>Secure cloud infrastructure</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="security-cta" id="contact">
+        <div class="container">
+            <h2>Ready to Secure Your Business?</h2>
+            <p>Get a free security assessment and discover how we can protect your organization from cyber threats.</p>
+            <a href="#contact" class="btn">Request Free Security Audit</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h1 style="color: var(--secondary); margin-bottom: 20px; font-size: 1.8rem;">ADX<span style="color: var(--accent);">PI</span></h1>
+                    <p style="font-size: 0.9rem; color: #bbb;">Advanced cybersecurity solutions for the modern enterprise.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Security Services</h4>
+                    <ul>
+                        <li><a href="#">Managed Security</a></li>
+                        <li><a href="#">Cloud Security</a></li>
+                        <li><a href="#">Network Protection</a></li>
+                        <li><a href="#">Endpoint Security</a></li>
+                        <li><a href="#">Incident Response</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#approach">Security Approach</a></li>
+                        <li><a href="#threats">Threat Protection</a></li>
+                        <li><a href="#casestudies">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Security Resources</h4>
+                    <ul>
+                        <li><a href="#">Threat Intelligence Reports</a></li>
+                        <li><a href="#">Security Whitepapers</a></li>
+                        <li><a href="#">Compliance Guides</a></li>
+                        <li><a href="#">Security Blog</a></li>
+                        <li><a href="#">Webinars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Security Operations Center</li>
+                        <li><i class="fas fa-phone"></i> +1 (888) SEC-ADXPI</li>
+                        <li><i class="fas fa-envelope"></i> security@adxpi.com</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Security Support</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ADXPI Security. All Rights Reserved. | Protecting Digital Assets Worldwide</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+                header.style.background = 'rgba(12, 26, 45, 0.98)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
+                header.style.background = 'rgba(12, 26, 45, 0.95)';
+            }
+        });
+
+        // Card hover effects
+        document.querySelectorAll('.service-card, .step, .threat-card, .case-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+                card.style.boxShadow = '0 15px 30px rgba(255, 106, 0, 0.2)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            });
+        });
+
+        // Form submission
+        document.querySelectorAll('.btn').forEach(button => {
+            if (button.textContent.includes('Audit') || button.textContent.includes('Protected')) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert("Thank you for your interest! Our security team will contact you shortly to schedule your free security assessment.");
+                });
+            }
+        });
+
+        // Animate stats on scroll
+        const statItems = document.querySelectorAll('.stat-item');
+        
+        function animateStats() {
+            statItems.forEach(item => {
+                const position = item.getBoundingClientRect();
+                if(position.top < window.innerHeight * 0.8) {
+                    item.style.opacity = "1";
+                    item.style.transform = "translateY(0)";
+                }
+            });
+        }
+        
+        // Set initial state
+        statItems.forEach(item => {
+            item.style.opacity = "0";
+            item.style.transform = "translateY(20px)";
+            item.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+        });
+        
+        window.addEventListener('scroll', animateStats);
+        animateStats(); // Initial check
+    </script>
+</body>
+</html>
