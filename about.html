@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ADXPI | Global IT Solutions Provider</title>
+    <meta name="description" content="Learn about ADXPI Technologies - our history, mission, leadership team, and commitment to delivering innovative IT solutions worldwide.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0066b3;
+            --secondary: #00a9e0;
+            --accent: #ff6a00;
+            --dark: #1a3a5f;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary);
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark);
+        }
+
+        /* About Hero Section */
+        .about-hero {
+            background: linear-gradient(rgba(26, 58, 95, 0.8), rgba(26, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            padding: 180px 0 100px;
+            text-align: center;
+            color: white;
+        }
+
+        .about-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .about-hero p {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* About Content */
+        .about-content {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        /* Our Story Section */
+        .our-story {
+            margin-bottom: 80px;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .story-content h2 {
+            font-size: clamp(1.8rem, 3vw, 2.3rem);
+            color: var(--dark);
+            margin-bottom: 25px;
+        }
+
+        .story-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .story-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            height: auto;
+            object-fit: cover;
+        }
+
+        .milestones {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .milestone-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .milestone-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .milestone-card h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .milestone-card p {
+            font-size: 1rem;
+            color: var(--dark);
+        }
+
+        /* Mission & Values */
+        .mission-values {
+            background-color: var(--light);
+            padding: 80px 0;
+            margin: 80px 0;
+        }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .mission, .values {
+            padding: 30px;
+        }
+
+        .mission {
+            border-right: 1px solid #eee;
+        }
+
+        .mv-grid h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .mv-grid h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+
+        .mv-grid p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .values-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .value-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-card i {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .value-card h4 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        /* Leadership Team */
+        .leadership {
+            margin-bottom: 80px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .member-image {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .team-member:hover .member-image img {
+            transform: scale(1.05);
+        }
+
+        .member-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .member-info h3 {
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .member-info .position {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .member-info p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: var(--gray);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(0, 106, 179, 0.1);
+            border-radius: 50%;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Global Presence */
+        .global-presence {
+            background: linear-gradient(to bottom right, var(--dark), var(--primary));
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 80px;
+        }
+
+        .global-presence .section-title h2 {
+            color: white;
+        }
+
+        .office-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .office-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+        }
+
+        .office-card:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .office-card i {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .office-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Call to Action */
+        .about-cta {
+            background: linear-gradient(rgba(255, 106, 0, 0.9), rgba(255, 106, 0, 0.9)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .about-cta h2 {
+            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            margin-bottom: 20px;
+        }
+
+        .about-cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 70px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links-footer {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links-footer a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .story-grid, .mv-grid {
+                gap: 30px;
+            }
+            
+            .milestones, .values-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background-color: white;
+                width: 280px;
+                height: calc(100vh - 70px);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+                padding: 40px 0;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 5px 15px;
+            }
+            
+            .about-hero {
+                padding: 150px 0 80px;
+            }
+            
+            .story-grid, .mv-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 50px;
+                margin-bottom: 50px;
+            }
+            
+            .about-content {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .milestones, .values-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>ADX<span>PI</span></h1>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="index.html#industries">Industries</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="index.html#contact" class="btn">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Our Journey of Innovation</h1>
+            <p>For over a decade, ADXPI has been at the forefront of digital transformation, helping businesses worldwide harness the power of technology.</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <!-- Our Story Section -->
+            <div class="our-story">
+                <div class="story-grid">
+                    <div class="story-content">
+                        <h2>Our Humble Beginnings</h2>
+                        <p>Founded in 2010 by technology visionaries Sarah Johnson and Michael Chen, ADXPI started as a small IT consulting firm in San Francisco. With just five employees and a single client, we set out with a mission to make technology work for businesses, not against them.</p>
+                        <p>Our breakthrough came in 2013 when we developed a revolutionary cloud migration framework that reduced implementation times by 40%. This innovation established ADXPI as a leader in cloud solutions and set us on a path of rapid growth.</p>
+                        <p>Today, ADXPI has grown into a global technology solutions provider with over 10,000 professionals serving clients in 20+ countries. Despite our growth, we remain committed to our founding principles of innovation, excellence, and client success.</p>
+                        
+                        <div class="milestones">
+                            <div class="milestone-card">
+                                <h3>2010</h3>
+                                <p>Founded in San Francisco</p>
+                            </div>
+                            <div class="milestone-card">
+                                <h3>500+</h3>
+                                <p>Global Clients</p>
+                            </div>
+                            <div class="milestone-card">
+                                <h3>20+</h3>
+                                <p>Countries Served</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" alt="ADXPI early office">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission & Values Section -->
+            <div class="mission-values">
+                <div class="mv-grid">
+                    <div class="mission">
+                        <h3>Our Mission</h3>
+                        <p>To empower organizations worldwide through innovative technology solutions that drive growth, enhance efficiency, and create sustainable competitive advantages.</p>
+                        <p>We believe that technology should be an enabler, not a barrier. Our mission is to simplify complex technology landscapes and help businesses focus on what they do best.</p>
+                    </div>
+                    <div class="values">
+                        <h3>Core Values</h3>
+                        <div class="values-list">
+                            <div class="value-card">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Innovation</h4>
+                                <p>We embrace change and continuously seek better solutions.</p>
+                            </div>
+                            <div class="value-card">
+                                <i class="fas fa-users"></i>
+                                <h4>Collaboration</h4>
+                                <p>We believe in teamwork and building strong partnerships.</p>
+                            </div>
+                            <div class="value-card">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Integrity</h4>
+                                <p>We do what's right, even when no one is watching.</p>
+                            </div>
+                            <div class="value-card">
+                                <i class="fas fa-star"></i>
+                                <h4>Excellence</h4>
+                                <p>We strive for the highest quality in everything we do.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leadership Team -->
+            <div class="leadership">
+                <div class="section-title">
+                    <h2>Leadership Team</h2>
+                    <p>The visionaries guiding ADXPI's global success</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Sarah Johnson">
+                        </div>
+                        <div class="member-info">
+                            <h3>Sarah Johnson</h3>
+                            <div class="position">CEO & Co-Founder</div>
+                            <p>Technology visionary with 20+ years in IT transformation. Former CTO at Global Tech Solutions.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Michael Chen">
+                        </div>
+                        <div class="member-info">
+                            <h3>Michael Chen</h3>
+                            <div class="position">CTO & Co-Founder</div>
+                            <p>Cloud computing pioneer with 15 patents in distributed systems architecture.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Priya Sharma">
+                        </div>
+                        <div class="member-info">
+                            <h3>Priya Sharma</h3>
+                            <div class="position">Chief Innovation Officer</div>
+                            <p>AI and machine learning expert leading our R&D initiatives across 5 countries.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" alt="Robert Williams">
+                        </div>
+                        <div class="member-info">
+                            <h3>Robert Williams</h3>
+                            <div class="position">VP of Global Operations</div>
+                            <p>Operations leader with expertise in scaling technology services globally.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Global Presence -->
+            <div class="global-presence">
+                <div class="section-title">
+                    <h2>Global Presence</h2>
+                    <p>Serving clients worldwide from strategic locations</p>
+                </div>
+                <div class="office-grid">
+                    <div class="office-card">
+                        <i class="fas fa-building"></i>
+                        <h3>San Francisco</h3>
+                        <p>Global Headquarters</p>
+                        <p>Innovation Plaza, Tech District</p>
+                    </div>
+                    <div class="office-card">
+                        <i class="fas fa-building"></i>
+                        <h3>New York</h3>
+                        <p>Financial Services Hub</p>
+                        <p>Wall Street Plaza</p>
+                    </div>
+                    <div class="office-card">
+                        <i class="fas fa-building"></i>
+                        <h3>London</h3>
+                        <p>European Headquarters</p>
+                        <p>Canary Wharf</p>
+                    </div>
+                    <div class="office-card">
+                        <i class="fas fa-building"></i>
+                        <h3>Singapore</h3>
+                        <p>Asia-Pacific Hub</p>
+                        <p>Marina Bay Financial Centre</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="about-cta">
+                <h2>Join Our Journey</h2>
+                <p>Become part of our story - explore career opportunities or partner with us to transform your business.</p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="careers.html" class="btn">View Careers</a>
+                    <a href="index.html#contact" class="btn btn-outline">Partner With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h1 style="color: white; margin-bottom: 20px; font-size: 1.8rem;">ADX<span style="color: var(--accent);">PI</span></h1>
+                    <p style="font-size: 0.9rem;">Delivering excellence in IT services and digital transformation solutions since 2010.</p>
+                    <div class="social-links-footer">
+                        <a href="https://facebook.com/adxpi" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/adxpi" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/company/adxpi" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/adxpi" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#industries">Industries</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="it-consulting.html">IT Consulting</a></li>
+                        <li><a href="cloud-solutions.html">Cloud Solutions</a></li>
+                        <li><a href="cyber-security.html">Cyber Security</a></li>
+                        <li><a href="#">AI & Analytics</a></li>
+                        <li><a href="#">Enterprise Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Innovation Plaza, SF</li>
+                        <li><i class="fas fa-phone"></i> +1 (800) 555-1234</li>
+                        <li><i class="fas fa-envelope"></i> info@adxpi.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9am - 6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 ADXPI Technologies. All Rights Reserved. | <a href="privacy.html" style="color: #aaa;">Privacy Policy</a> | <a href="terms.html" style="color: #aaa;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'white';
+            }
+        });
+
+        // Set active link
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
