@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Solutions | ADXPI</title>
+    <title>Cyber Security Solutions | ADXPI Technologies</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="ADXPI provides comprehensive cyber security solutions to protect your business from evolving digital threats. Endpoint security, threat intelligence, and compliance management.">
+    <meta name="keywords" content="cyber security, network security, threat protection, data security, compliance, ADXPI">
+    <meta name="author" content="ADXPI Technologies">
+    
     <style>
         * {
             margin: 0;
@@ -20,6 +24,10 @@
             --dark: #1a3a5f;
             --light: #f8f9fa;
             --gray: #6c757d;
+            --security-gradient: linear-gradient(135deg, #1a3a5f 0%, #0066b3 50%, #00a9e0 100%);
+            --cyber-dark: #0d2135;
+            --cyber-blue: #00a9e0;
+            --cyber-red: #e63946;
             --transition: all 0.3s ease;
         }
 
@@ -154,9 +162,9 @@
             color: var(--dark);
         }
 
-        /* Hero Section for Cloud Solutions */
-        .cloud-hero {
-            background: linear-gradient(rgba(26, 58, 95, 0.85), rgba(26, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+        /* Cyber Hero Section */
+        .cyber-hero {
+            background: linear-gradient(rgba(13, 33, 53, 0.9), rgba(13, 33, 53, 0.95)), url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') no-repeat center center/cover;
             height: 70vh;
             display: flex;
             align-items: center;
@@ -165,39 +173,126 @@
             padding-top: 100px;
         }
 
-        .cloud-hero-content {
-            max-width: 800px;
+        .cyber-hero-content {
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .cloud-hero h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
+        .cyber-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
             margin-bottom: 20px;
             line-height: 1.2;
         }
 
-        .cloud-hero p {
-            font-size: clamp(1rem, 2.5vw, 1.3rem);
+        .cyber-hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
             margin-bottom: 30px;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        /* Section Styling */
-        .section {
-            padding: 80px 0;
+        /* Cyber Overview Section */
+        .cyber-overview {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+
+        .cyber-overview-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .cyber-overview-text h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--cyber-dark);
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .cyber-overview-text h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: 0;
+            left: 0;
+        }
+
+        .cyber-overview-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .cyber-overview-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            height: auto;
+        }
+
+        /* Threat Stats Section */
+        .threat-stats {
+            padding: 70px 0;
+            background-color: var(--cyber-dark);
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 30px 20px;
+            transition: var(--transition);
+            border-top: 4px solid var(--cyber-blue);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--cyber-blue);
+            margin-bottom: 10px;
+        }
+
+        .stat-title {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        /* Security Services Section */
+        .security-services {
+            padding: 100px 0;
+            background: var(--security-gradient);
+            color: white;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .section-title h2 {
             font-size: clamp(1.8rem, 3vw, 2.5rem);
-            color: var(--dark);
+            color: white;
             position: relative;
             display: inline-block;
             padding-bottom: 15px;
@@ -215,15 +310,10 @@
         }
 
         .section-title p {
-            color: var(--gray);
+            color: rgba(255, 255, 255, 0.8);
             max-width: 700px;
             margin: 20px auto 0;
             font-size: clamp(0.9rem, 2vw, 1rem);
-        }
-
-        /* Cloud Services Section */
-        .cloud-services {
-            background-color: var(--light);
         }
 
         .services-grid {
@@ -233,111 +323,104 @@
         }
 
         .service-card {
-            background: white;
-            border-radius: 10px;
-            padding: 40px 30px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 35px 30px;
             text-align: center;
-            border-top: 4px solid var(--primary);
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
         .service-icon {
             width: 80px;
             height: 80px;
-            background-color: rgba(0, 106, 179, 0.1);
+            background-color: rgba(255, 255, 255, 0.15);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            color: var(--primary);
+            color: white;
             font-size: 32px;
         }
 
         .service-card h3 {
             margin-bottom: 15px;
-            color: var(--dark);
             font-size: 1.4rem;
         }
 
         .service-card p {
-            margin-bottom: 20px;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
         }
 
-        .service-card ul {
-            text-align: left;
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .service-card ul li {
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-        }
-
-        /* Migration Process Section */
-        .migration-process {
-            background: linear-gradient(to bottom right, var(--dark), var(--primary));
-            color: white;
-        }
-
-        .migration-process .section-title h2 {
-            color: white;
+        /* Security Process Section */
+        .security-process {
+            padding: 100px 0;
+            background-color: white;
         }
 
         .process-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
-            counter-reset: step-counter;
+            margin-top: 50px;
         }
 
-        .step {
-            background-color: rgba(255, 255, 255, 0.1);
+        .process-step {
+            background-color: var(--light);
             border-radius: 10px;
             padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             position: relative;
-            backdrop-filter: blur(5px);
             transition: var(--transition);
+            border-top: 3px solid var(--cyber-blue);
         }
 
-        .step:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+        .process-step:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
-        .step::before {
-            counter-increment: step-counter;
-            content: counter(step-counter);
+        .step-number {
             position: absolute;
             top: -20px;
-            left: -20px;
-            width: 50px;
-            height: 50px;
-            background: var(--accent);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
-            font-weight: 700;
-            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
         }
 
-        .step h3 {
+        .process-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .process-step h3 {
             margin-bottom: 15px;
-            font-size: 1.3rem;
+            color: var(--cyber-dark);
         }
 
-        /* Benefits Section */
-        .benefits {
+        /* Security Benefits Section */
+        .security-benefits {
+            padding: 100px 0;
             background-color: var(--light);
         }
 
@@ -345,74 +428,68 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            margin-top: 50px;
         }
 
         .benefit-card {
-            background: white;
+            background-color: white;
             border-radius: 10px;
             padding: 30px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: var(--transition);
-            display: flex;
-            flex-direction: column;
+            border-left: 4px solid var(--cyber-blue);
         }
 
         .benefit-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
 
         .benefit-icon {
-            width: 60px;
-            height: 60px;
-            background-color: rgba(0, 106, 179, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            font-size: 40px;
+            color: var(--cyber-blue);
             margin-bottom: 20px;
-            color: var(--primary);
-            font-size: 24px;
         }
 
         .benefit-card h3 {
             margin-bottom: 15px;
-            color: var(--dark);
-            font-size: 1.3rem;
+            color: var(--cyber-dark);
         }
 
-        /* Case Studies Section */
-        .case-studies {
-            background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+        /* Security Case Studies */
+        .security-cases {
+            padding: 100px 0;
+            background: var(--cyber-dark);
             color: white;
         }
 
-        .case-studies .section-title h2 {
-            color: white;
-        }
-
-        .case-grid {
+        .cases-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            margin-top: 50px;
         }
 
         .case-card {
-            background: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
-            backdrop-filter: blur(5px);
         }
 
         .case-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
+        .case-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
         .case-content {
-            padding: 30px;
+            padding: 25px;
         }
 
         .case-content h3 {
@@ -420,58 +497,33 @@
             font-size: 1.3rem;
         }
 
-        .case-content .industry {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-bottom: 15px;
-        }
-
-        .case-content .results {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .case-content .results h4 {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-
-        .case-content .results ul {
-            padding-left: 20px;
-            font-size: 0.9rem;
-        }
-
-        .case-content .results li {
-            margin-bottom: 8px;
+        .case-content p {
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.8);
         }
 
         /* CTA Section */
-        .cloud-cta {
-            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+        .security-cta {
+            padding: 100px 0;
+            background: linear-gradient(rgba(13, 33, 53, 0.9), rgba(13, 33, 53, 0.95)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') no-repeat center center/cover;
             text-align: center;
-            padding: 80px 0;
+            color: white;
         }
 
-        .cloud-cta h2 {
+        .security-cta h2 {
             font-size: clamp(1.8rem, 3vw, 2.5rem);
             margin-bottom: 20px;
-            color: var(--dark);
         }
 
-        .cloud-cta p {
+        .security-cta p {
             max-width: 700px;
             margin: 0 auto 30px;
-            font-size: clamp(1rem, 2vw, 1.2rem);
-            color: var(--dark);
+            font-size: 1.1rem;
         }
 
         /* Footer */
         footer {
-            background-color: var(--dark);
+            background-color: var(--cyber-dark);
             color: white;
             padding: 60px 0 20px;
         }
@@ -554,8 +606,8 @@
 
         /* Responsive Design */
         @media (max-width: 992px) {
-            .services-grid, .process-steps, .benefits-grid, .case-grid {
-                gap: 20px;
+            .cyber-overview-content {
+                gap: 30px;
             }
         }
 
@@ -590,38 +642,41 @@
                 font-size: 18px;
             }
             
-            .cloud-hero {
-                height: 60vh;
+            .cyber-hero {
+                height: auto;
+                min-height: 70vh;
                 padding: 100px 0 60px;
             }
             
-            .section {
-                padding: 60px 0;
+            .cyber-overview-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .cyber-overview-text h2::after {
+                left: 0;
+                transform: none;
             }
         }
 
         @media (max-width: 576px) {
-            .service-card, .step, .benefit-card, .case-card {
+            .cyber-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .cyber-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .service-card {
                 padding: 25px 20px;
-            }
-            
-            .cloud-hero {
-                height: 50vh;
-            }
-            
-            .step::before {
-                width: 40px;
-                height: 40px;
-                top: -15px;
-                left: -15px;
-                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-     <header>
+    <header>
         <div class="container header-container">
             <div class="logo">
                 <h1>ADXPI<span></span></h1>
@@ -642,267 +697,237 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="security-hero">
-        <div class="container security-hero-content">
-            <h1>Advanced Cybersecurity Solutions for the Digital Age</h1>
-            <p>Protect your business from evolving cyber threats with our comprehensive security services and expert defense strategies.</p>
+    <!-- Cyber Hero Section -->
+    <section class="cyber-hero">
+        <div class="container cyber-hero-content">
+            <h1>Advanced Cyber Security Solutions</h1>
+            <p>Protect your business from evolving cyber threats with our comprehensive security framework and 24/7 threat monitoring</p>
             <div class="hero-btns">
-                <a href="#services" class="btn">Explore Security Services</a>
-                <a href="/#contact" class="btn btn-outline">Free Security Audit</a>
+                <a href="#services" class="btn">Explore Solutions</a>
+                <a href="#contact" class="btn">Security Assessment</a>
             </div>
-            
-            <div class="cyber-stats">
-                <div class="stat-item">
-                    <h3>24/7</h3>
-                    <p>Security Monitoring</p>
+        </div>
+    </section>
+
+    <!-- Cyber Overview Section -->
+    <section class="cyber-overview" id="overview">
+        <div class="container">
+            <div class="cyber-overview-content">
+                <div class="cyber-overview-text">
+                    <h2>Fortify Your Digital Defenses</h2>
+                    <p>In an era of sophisticated cyber threats, protecting your digital assets has never been more critical. ADXPI's comprehensive security solutions provide multi-layered protection against evolving threats, data breaches, and compliance challenges.</p>
+                    <p>Our security experts combine cutting-edge technology with industry best practices to create tailored security frameworks that address your specific vulnerabilities. From network security to endpoint protection, we cover all aspects of your digital ecosystem.</p>
+                    <p>With continuous threat monitoring and rapid incident response capabilities, ADXPI ensures your business remains resilient against both known and emerging cyber threats.</p>
                 </div>
-                <div class="stat-item">
-                    <h3>99.99%</h3>
-                    <p>Threat Detection Rate</p>
+                <div class="cyber-overview-image">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80" alt="Cyber Security Framework">
                 </div>
-                <div class="stat-item">
-                    <h3>500+</h3>
-                    <p>Protected Businesses</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Threat Stats Section -->
+    <section class="threat-stats">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Growing Cyber Threat Landscape</h2>
+                <p>Understanding the scale and impact of modern cyber threats</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">68%</div>
+                    <div class="stat-title">of businesses faced cyber attacks in 2024</div>
                 </div>
-                <div class="stat-item">
-                    <h3>15min</h3>
-                    <p>Average Response Time</p>
+                <div class="stat-card">
+                    <div class="stat-value">$4.45M</div>
+                    <div class="stat-title">average cost of a data breach</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">287 days</div>
+                    <div class="stat-title">average time to identify a breach</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">+15%</div>
+                    <div class="stat-title">yearly increase in ransomware attacks</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Security Services Section -->
-    <section class="section security-services" id="services">
+    <section class="security-services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Cybersecurity Services</h2>
-                <p>Comprehensive protection for your digital assets and infrastructure</p>
+                <h2>Our Cyber Security Services</h2>
+                <p>Comprehensive protection for every layer of your digital infrastructure</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Managed Security Services</h3>
-                    <p>24/7 monitoring, threat detection, and incident response by our security experts.</p>
-                    <ul>
-                        <li>Continuous security monitoring</li>
-                        <li>Threat intelligence and analysis</li>
-                        <li>Incident response management</li>
-                        <li>Vulnerability management</li>
-                    </ul>
-                  
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-user-lock"></i>
-                    </div>
-                    <h3>Identity & Access Management</h3>
-                    <p>Secure access control and authentication solutions for your organization.</p>
-                    <ul>
-                        <li>Multi-factor authentication</li>
-                        <li>Privileged access management</li>
-                        <li>Single sign-on solutions</li>
-                        <li>Identity governance</li>
-                    </ul>
-                   
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>Data Protection & Encryption</h3>
-                    <p>Safeguard sensitive data with advanced encryption and protection strategies.</p>
-                    <ul>
-                        <li>Data classification and discovery</li>
-                        <li>End-to-end encryption</li>
-                        <li>Data loss prevention</li>
-                        <li>Cloud data security</li>
-                    </ul>
-                   
+                    <h3>Threat Protection</h3>
+                    <p>Advanced threat detection and prevention against malware, ransomware, and zero-day attacks.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-network-wired"></i>
                     </div>
                     <h3>Network Security</h3>
-                    <p>Protect your network infrastructure from external and internal threats.</p>
-                    <ul>
-                        <li>Firewall management</li>
-                        <li>Intrusion detection & prevention</li>
-                        <li>VPN solutions</li>
-                        <li>Network segmentation</li>
-                    </ul>
-                   
+                    <p>Firewalls, intrusion detection, and network segmentation to protect your infrastructure.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Data Encryption</h3>
+                    <p>End-to-end encryption for data at rest, in transit, and during processing.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Identity & Access</h3>
+                    <p>Multi-factor authentication and privileged access management solutions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Compliance Management</h3>
+                    <p>GDPR, HIPAA, PCI-DSS compliance frameworks and audit support.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Security Operations</h3>
+                    <p>24/7 security monitoring, incident response, and threat intelligence.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Security Approach Section -->
-    <section class="section security-approach" id="approach">
+    <!-- Security Process Section -->
+    <section class="security-process">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Security Approach</h2>
-                <p>A proactive and comprehensive methodology to cybersecurity</p>
+            <div class="cyber-overview-text">
+                <h2>Our Security Implementation Framework</h2>
+                <p>A comprehensive approach to building cyber resilience</p>
             </div>
-            <div class="approach-steps">
-                <div class="step">
-                    <h3><i class="fas fa-search"></i> Assess</h3>
-                    <p>Comprehensive security assessment to identify vulnerabilities, risks, and compliance gaps.</p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="process-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Security Assessment</h3>
+                    <p>Comprehensive vulnerability scanning and penetration testing</p>
                 </div>
-                <div class="step">
-                    <h3><i class="fas fa-shield-alt"></i> Protect</h3>
-                    <p>Implementation of security controls and technologies to safeguard your assets.</p>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="process-icon">
+                        <i class="fas fa-chess-board"></i>
+                    </div>
+                    <h3>Strategy Development</h3>
+                    <p>Create tailored security roadmap aligned with business goals</p>
                 </div>
-                <div class="step">
-                    <h3><i class="fas fa-eye"></i> Detect</h3>
-                    <p>Continuous monitoring and threat detection to identify potential security incidents.</p>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="process-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Layered Implementation</h3>
+                    <p>Deploy defense-in-depth security controls and technologies</p>
                 </div>
-                <div class="step">
-                    <h3><i class="fas fa-bolt"></i> Respond</h3>
-                    <p>Rapid incident response to contain, investigate, and remediate security events.</p>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="process-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Training & Awareness</h3>
+                    <p>Educate employees on security best practices and policies</p>
                 </div>
-                <div class="step">
-                    <h3><i class="fas fa-sync-alt"></i> Recover</h3>
-                    <p>Business continuity and disaster recovery planning to restore operations.</p>
-                </div>
-                <div class="step">
-                    <h3><i class="fas fa-chart-line"></i> Optimize</h3>
-                    <p>Continuous improvement of security posture through analysis and enhancement.</p>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="process-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Continuous Monitoring</h3>
+                    <p>24/7 threat detection, incident response, and improvement</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Threat Protection Section -->
-    <section class="section threat-protection" id="threats">
+    <!-- Security Benefits Section -->
+    <section class="security-benefits">
         <div class="container">
-            <div class="section-title">
-                <h2>Advanced Threat Protection</h2>
-                <p>Defending against the evolving threat landscape</p>
+            <div class="cyber-overview-text">
+                <h2>Benefits of Comprehensive Security</h2>
+                <p>How our solutions protect your business and enable growth</p>
             </div>
-            <div class="threat-grid">
-                <div class="threat-card">
-                    <div class="threat-icon">
-                        <i class="fas fa-bug"></i>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lock"></i>
                     </div>
-                    <h3>Malware Protection</h3>
-                    <p>Advanced defense against viruses, ransomware, spyware, and other malicious software.</p>
+                    <h3>Data Protection</h3>
+                    <p>Safeguard sensitive information and intellectual property from unauthorized access and breaches.</p>
                 </div>
-                <div class="threat-card">
-                    <div class="threat-icon">
-                        <i class="fas fa-fish"></i>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-virus"></i>
                     </div>
-                    <h3>Phishing Defense</h3>
-                    <p>Protection against social engineering attacks and fraudulent communication attempts.</p>
+                    <h3>Threat Prevention</h3>
+                    <p>Proactively identify and neutralize threats before they impact your operations.</p>
                 </div>
-                <div class="threat-card">
-                    <div class="threat-icon">
-                        <i class="fas fa-skull"></i>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-file-contract"></i>
                     </div>
-                    <h3>Zero-Day Threats</h3>
-                    <p>Proactive detection and mitigation of previously unknown vulnerabilities and exploits.</p>
+                    <h3>Regulatory Compliance</h3>
+                    <p>Meet industry-specific regulations and avoid costly fines and reputational damage.</p>
                 </div>
-                <div class="threat-card">
-                    <div class="threat-icon">
-                        <i class="fas fa-cloud-download-alt"></i>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-business-time"></i>
                     </div>
-                    <h3>Cloud Security</h3>
-                    <p>Comprehensive protection for cloud infrastructure, applications, and data.</p>
+                    <h3>Business Continuity</h3>
+                    <p>Minimize downtime and ensure operational resilience against cyber incidents.</p>
                 </div>
-                <div class="threat-card">
-                    <div class="threat-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-tie"></i>
                     </div>
-                    <h3>Endpoint Security</h3>
-                    <p>Protection for all devices accessing your network, including remote and mobile devices.</p>
+                    <h3>Customer Trust</h3>
+                    <p>Build confidence with customers and partners through demonstrated security commitment.</p>
                 </div>
-                <div class="threat-card">
-                    <div class="threat-icon">
-                        <i class="fas fa-database"></i>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Data Breach Prevention</h3>
-                    <p>Strategies and technologies to prevent unauthorized access to sensitive information.</p>
+                    <h3>Competitive Advantage</h3>
+                    <p>Leverage security as a business differentiator in your market.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Case Studies Section -->
-    <section class="section case-studies" id="casestudies">
-        <div class="container">
-            <div class="section-title">
-                <h2>Security Success Stories</h2>
-                <p>How we've protected organizations from cyber threats</p>
-            </div>
-            <div class="case-grid">
-                <div class="case-card">
-                    <div class="case-content">
-                        <span class="industry">Financial Services</span>
-                        <h3>Banking Security Transformation</h3>
-                        <p>Comprehensive security overhaul for a multinational bank with assets over $50B.</p>
-                        <div class="results">
-                            <h4>Security Improvements:</h4>
-                            <ul>
-                                <li>Prevented $15M in potential fraud</li>
-                                <li>Reduced security incidents by 92%</li>
-                                <li>Achieved regulatory compliance</li>
-                                <li>24/7 threat monitoring implemented</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="case-card">
-                    <div class="case-content">
-                        <span class="industry">Healthcare</span>
-                        <h3>Hospital Network Protection</h3>
-                        <p>Securing patient data and medical systems for a network of 22 hospitals.</p>
-                        <div class="results">
-                            <h4>Security Improvements:</h4>
-                            <ul>
-                                <li>HIPAA compliance achieved</li>
-                                <li>Ransomware attack prevented</li>
-                                <li>99.99% system uptime</li>
-                                <li>Secure remote access for staff</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="case-card">
-                    <div class="case-content">
-                        <span class="industry">E-commerce</span>
-                        <h3>E-commerce Platform Security</h3>
-                        <p>Protecting customer data and payment systems for a leading online retailer.</p>
-                        <div class="results">
-                            <h4>Security Improvements:</h4>
-                            <ul>
-                                <li>PCI DSS compliance maintained</li>
-                                <li>Zero data breaches since implementation</li>
-                                <li>Automated threat detection</li>
-                                <li>Secure cloud infrastructure</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  
 
     <!-- CTA Section -->
     <section class="security-cta" id="contact">
         <div class="container">
             <h2>Ready to Secure Your Business?</h2>
-            <p>Get a free security assessment and discover how we can protect your organization from cyber threats.</p>
-            <a href="/#contact" class="btn btn-outline">Request Free Security Audit</a>
+            <p>Schedule a security assessment with our experts to identify vulnerabilities and develop a comprehensive protection strategy tailored to your organization.</p>
+            <a href="/#contact" class="btn">Request Security Assessment</a>
         </div>
     </section>
 
     <!-- Footer -->
-     <footer>
-        <div class="container">
+    <footer>
+               <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <h1 style="color: white; margin-bottom: 20px; font-size: 1.8rem;">ADXPI<span style="color: var(--accent);"></span></h1>
@@ -981,59 +1006,39 @@
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
-                header.style.background = 'rgba(12, 26, 45, 0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
             } else {
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
-                header.style.background = 'rgba(12, 26, 45, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.style.background = 'white';
             }
         });
 
-        // Card hover effects
-        document.querySelectorAll('.service-card, .step, .threat-card, .case-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-10px)';
-                card.style.boxShadow = '0 15px 30px rgba(255, 106, 0, 0.2)';
-            });
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.service-card, .process-step, .benefit-card, .case-card, .stat-card');
             
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-                card.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
-            });
-        });
-
-        // Form submission
-        document.querySelectorAll('.btn').forEach(button => {
-            if (button.textContent.includes('Audit') || button.textContent.includes('Protected')) {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    alert("Thank you for your interest! Our security team will contact you shortly to schedule your free security assessment.");
-                });
-            }
-        });
-
-        // Animate stats on scroll
-        const statItems = document.querySelectorAll('.stat-item');
-        
-        function animateStats() {
-            statItems.forEach(item => {
-                const position = item.getBoundingClientRect();
-                if(position.top < window.innerHeight * 0.8) {
-                    item.style.opacity = "1";
-                    item.style.transform = "translateY(0)";
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
                 }
             });
-        }
-        
-        // Set initial state
-        statItems.forEach(item => {
-            item.style.opacity = "0";
-            item.style.transform = "translateY(20px)";
-            item.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+        };
+
+        // Set initial state for animated elements
+        document.querySelectorAll('.service-card, .process-step, .benefit-card, .case-card, .stat-card').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         });
-        
-        window.addEventListener('scroll', animateStats);
-        animateStats(); // Initial check
+
+        // Trigger animations on load and scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
     </script>
 </body>
 </html>
