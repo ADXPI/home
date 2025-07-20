@@ -18,7 +18,6 @@
             --secondary: #00a9e0;
             --accent: #ff6a00;
             --dark: #1a3a5f;
-            --dark-bg: #0c1a2d;
             --light: #f8f9fa;
             --gray: #6c757d;
             --transition: all 0.3s ease;
@@ -26,9 +25,9 @@
 
         body {
             font-family: 'Open Sans', sans-serif;
-            color: #fff;
+            color: #333;
             line-height: 1.6;
-            background-color: var(--dark-bg);
+            background-color: #fff;
             overflow-x: hidden;
         }
 
@@ -46,14 +45,13 @@
 
         /* Header Styles */
         header {
-            background-color: rgba(12, 26, 45, 0.95);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             transition: var(--transition);
-            border-bottom: 1px solid rgba(0, 169, 224, 0.2);
         }
 
         .header-container {
@@ -70,7 +68,7 @@
 
         .logo h1 {
             font-size: 28px;
-            color: var(--secondary);
+            color: var(--primary);
             font-weight: 700;
             margin-left: 10px;
         }
@@ -90,7 +88,7 @@
 
         .nav-menu li a {
             text-decoration: none;
-            color: #fff;
+            color: var(--dark);
             font-weight: 500;
             font-size: 16px;
             transition: var(--transition);
@@ -98,7 +96,7 @@
         }
 
         .nav-menu li a:hover {
-            color: var(--accent);
+            color: var(--primary);
         }
 
         .nav-menu li a::after {
@@ -108,7 +106,7 @@
             height: 2px;
             bottom: -5px;
             left: 0;
-            background-color: var(--accent);
+            background-color: var(--primary);
             transition: var(--transition);
         }
 
@@ -118,7 +116,7 @@
 
         .btn {
             display: inline-block;
-            background-color: var(--accent);
+            background-color: var(--primary);
             color: white;
             padding: 12px 25px;
             border-radius: 4px;
@@ -131,19 +129,19 @@
         }
 
         .btn:hover {
-            background-color: #ff8533;
+            background-color: var(--secondary);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 106, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .btn-outline {
             background-color: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
+            border: 2px solid var(--primary);
+            color: var(--primary);
         }
 
         .btn-outline:hover {
-            background-color: var(--accent);
+            background-color: var(--primary);
             color: white;
         }
 
@@ -153,84 +151,53 @@
             background: none;
             border: none;
             font-size: 24px;
-            color: white;
+            color: var(--dark);
         }
 
-        /* Hero Section for Cybersecurity */
-        .security-hero {
-            background: linear-gradient(rgba(12, 26, 45, 0.9), rgba(12, 26, 45, 0.95)), url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-            height: 80vh;
+        /* Hero Section for Cloud Solutions */
+        .cloud-hero {
+            background: linear-gradient(rgba(26, 58, 95, 0.85), rgba(26, 58, 95, 0.9)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            height: 70vh;
             display: flex;
             align-items: center;
             text-align: center;
+            color: white;
             padding-top: 100px;
         }
 
-        .security-hero-content {
-            max-width: 900px;
+        .cloud-hero-content {
+            max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .security-hero h1 {
-            font-size: clamp(2.5rem, 5vw, 3.8rem);
+        .cloud-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             margin-bottom: 20px;
             line-height: 1.2;
-            color: #fff;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
 
-        .security-hero p {
+        .cloud-hero p {
             font-size: clamp(1rem, 2.5vw, 1.3rem);
             margin-bottom: 30px;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            color: #ddd;
-        }
-
-        .cyber-stats {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .stat-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 169, 224, 0.2);
-            border-radius: 8px;
-            padding: 20px;
-            min-width: 180px;
-            backdrop-filter: blur(5px);
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 5px;
-        }
-
-        .stat-item p {
-            font-size: 0.9rem;
-            margin-bottom: 0;
-            color: #ddd;
         }
 
         /* Section Styling */
         .section {
-            padding: 100px 0;
+            padding: 80px 0;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .section-title h2 {
-            font-size: clamp(1.8rem, 3vw, 2.8rem);
-            color: #fff;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--dark);
             position: relative;
             display: inline-block;
             padding-bottom: 15px;
@@ -248,70 +215,66 @@
         }
 
         .section-title p {
-            color: #bbb;
+            color: var(--gray);
             max-width: 700px;
             margin: 20px auto 0;
-            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            font-size: clamp(0.9rem, 2vw, 1rem);
         }
 
-        /* Security Services Section */
-        .security-services {
-            background: linear-gradient(to bottom, var(--dark-bg), #0a1423);
+        /* Cloud Services Section */
+        .cloud-services {
+            background-color: var(--light);
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
         .service-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 169, 224, 0.2);
+            background: white;
             border-radius: 10px;
             padding: 40px 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             transition: var(--transition);
             text-align: center;
-            backdrop-filter: blur(5px);
+            border-top: 4px solid var(--primary);
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--accent);
-            box-shadow: 0 10px 30px rgba(255, 106, 0, 0.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
 
         .service-icon {
             width: 80px;
             height: 80px;
-            background: rgba(255, 106, 0, 0.1);
+            background-color: rgba(0, 106, 179, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px;
-            color: var(--accent);
+            color: var(--primary);
             font-size: 32px;
         }
 
         .service-card h3 {
             margin-bottom: 15px;
-            color: #fff;
+            color: var(--dark);
             font-size: 1.4rem;
         }
 
         .service-card p {
             margin-bottom: 20px;
             font-size: 0.95rem;
-            color: #ddd;
         }
 
         .service-card ul {
             text-align: left;
             margin-bottom: 20px;
             padding-left: 20px;
-            color: #bbb;
         }
 
         .service-card ul li {
@@ -319,98 +282,113 @@
             font-size: 0.9rem;
         }
 
-        /* Security Approach Section */
-        .security-approach {
-            background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-            position: relative;
+        /* Migration Process Section */
+        .migration-process {
+            background: linear-gradient(to bottom right, var(--dark), var(--primary));
+            color: white;
         }
 
-        .security-approach::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(10, 20, 35, 0.9);
+        .migration-process .section-title h2 {
+            color: white;
         }
 
-        .approach-steps {
+        .process-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            position: relative;
-            z-index: 2;
+            gap: 25px;
+            counter-reset: step-counter;
         }
 
         .step {
-            background: rgba(26, 58, 95, 0.6);
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 30px;
             position: relative;
-            border: 1px solid rgba(0, 169, 224, 0.3);
+            backdrop-filter: blur(5px);
             transition: var(--transition);
         }
 
         .step:hover {
-            background: rgba(26, 58, 95, 0.8);
+            background-color: rgba(255, 255, 255, 0.2);
             transform: translateY(-5px);
-            border-color: var(--accent);
+        }
+
+        .step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
         }
 
         .step h3 {
             margin-bottom: 15px;
-            color: #fff;
             font-size: 1.3rem;
-            display: flex;
-            align-items: center;
         }
 
-        .step h3 i {
-            margin-right: 10px;
-            color: var(--accent);
+        /* Benefits Section */
+        .benefits {
+            background-color: var(--light);
         }
 
-        /* Threat Protection Section */
-        .threat-protection {
-            background: linear-gradient(to bottom, #0a1423, var(--dark-bg));
-        }
-
-        .threat-grid {
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .threat-card {
-            background: rgba(255, 255, 255, 0.05);
+        .benefit-card {
+            background: white;
             border-radius: 10px;
             padding: 30px;
-            text-align: center;
-            border: 1px solid rgba(255, 106, 0, 0.2);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
         }
 
-        .threat-card:hover {
-            background: rgba(255, 255, 255, 0.1);
+        .benefit-card:hover {
             transform: translateY(-5px);
-            border-color: var(--accent);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .threat-icon {
-            font-size: 48px;
-            color: var(--accent);
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 106, 179, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 24px;
         }
 
-        .threat-card h3 {
+        .benefit-card h3 {
             margin-bottom: 15px;
-            color: #fff;
+            color: var(--dark);
+            font-size: 1.3rem;
         }
 
         /* Case Studies Section */
         .case-studies {
-            background: linear-gradient(to bottom, var(--dark-bg), #081220);
+            background: linear-gradient(to bottom right, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .case-studies .section-title h2 {
+            color: white;
         }
 
         .case-grid {
@@ -420,48 +398,44 @@
         }
 
         .case-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
-            border: 1px solid rgba(0, 169, 224, 0.2);
+            backdrop-filter: blur(5px);
         }
 
         .case-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(255, 106, 0, 0.2);
-            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
         .case-content {
             padding: 30px;
         }
 
+        .case-content h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
         .case-content .industry {
             display: inline-block;
-            background: rgba(255, 106, 0, 0.2);
-            color: var(--accent);
+            background: rgba(255, 255, 255, 0.2);
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.85rem;
             margin-bottom: 15px;
         }
 
-        .case-content h3 {
-            margin-bottom: 15px;
-            color: #fff;
-            font-size: 1.3rem;
-        }
-
         .case-content .results {
             margin-top: 20px;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .case-content .results h4 {
-            color: var(--accent);
             margin-bottom: 10px;
             font-size: 1.1rem;
         }
@@ -469,7 +443,6 @@
         .case-content .results ul {
             padding-left: 20px;
             font-size: 0.9rem;
-            color: #bbb;
         }
 
         .case-content .results li {
@@ -477,46 +450,44 @@
         }
 
         /* CTA Section */
-        .security-cta {
-            background: linear-gradient(rgba(255, 106, 0, 0.8), rgba(255, 106, 0, 0.9)), url('https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+        .cloud-cta {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
             text-align: center;
-            padding: 100px 0;
+            padding: 80px 0;
         }
 
-        .security-cta h2 {
-            font-size: clamp(1.8rem, 3vw, 2.8rem);
+        .cloud-cta h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
             margin-bottom: 20px;
-            color: #fff;
+            color: var(--dark);
         }
 
-        .security-cta p {
+        .cloud-cta p {
             max-width: 700px;
             margin: 0 auto 30px;
             font-size: clamp(1rem, 2vw, 1.2rem);
-            color: #fff;
+            color: var(--dark);
         }
 
         /* Footer */
         footer {
-            background-color: #081220;
+            background-color: var(--dark);
             color: white;
-            padding: 80px 0 30px;
-            border-top: 1px solid rgba(0, 169, 224, 0.2);
+            padding: 60px 0 20px;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
+            gap: 30px;
+            margin-bottom: 40px;
         }
 
         .footer-col h4 {
             font-size: 1.1rem;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
-            color: #fff;
         }
 
         .footer-col h4::after {
@@ -534,7 +505,7 @@
         }
 
         .footer-col ul li {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .footer-col ul li a {
@@ -545,13 +516,13 @@
         }
 
         .footer-col ul li a:hover {
-            color: var(--accent);
+            color: white;
             padding-left: 5px;
         }
 
         .social-links {
             display: flex;
-            gap: 15px;
+            gap: 12px;
             margin-top: 20px;
         }
 
@@ -559,13 +530,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             color: white;
             transition: var(--transition);
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .social-links a:hover {
@@ -575,15 +546,15 @@
 
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #777;
+            color: #aaa;
             font-size: 0.85rem;
         }
 
         /* Responsive Design */
         @media (max-width: 992px) {
-            .services-grid, .approach-steps, .threat-grid, .case-grid {
+            .services-grid, .process-steps, .benefits-grid, .case-grid {
                 gap: 20px;
             }
         }
@@ -598,9 +569,10 @@
                 top: 70px;
                 right: -100%;
                 flex-direction: column;
-                background-color: rgba(12, 26, 45, 0.95);
+                background-color: white;
                 width: 280px;
                 height: calc(100vh - 70px);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
                 padding: 40px 0;
                 transition: var(--transition);
                 z-index: 999;
@@ -618,32 +590,31 @@
                 font-size: 18px;
             }
             
-            .security-hero {
-                height: auto;
-                min-height: 90vh;
-                padding: 120px 0 60px;
-            }
-            
-            .cyber-stats {
-                gap: 15px;
+            .cloud-hero {
+                height: 60vh;
+                padding: 100px 0 60px;
             }
             
             .section {
-                padding: 80px 0;
+                padding: 60px 0;
             }
         }
 
         @media (max-width: 576px) {
-            .service-card, .step, .threat-card, .case-card {
+            .service-card, .step, .benefit-card, .case-card {
                 padding: 25px 20px;
             }
             
-            .stat-item {
-                width: 100%;
+            .cloud-hero {
+                height: 50vh;
             }
             
-            .security-hero h1 {
-                font-size: 2.2rem;
+            .step::before {
+                width: 40px;
+                height: 40px;
+                top: -15px;
+                left: -15px;
+                font-size: 20px;
             }
         }
     </style>
