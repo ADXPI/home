@@ -62,7 +62,7 @@ logger = logging.getLogger(__name__)
 async def clear_bot_webhooks():
     """Clear any existing webhooks to ensure polling works"""
     try:
-        webhook_url = f"https://api.telegram.org/bot{BOT_TOKEN}/deleteWebhook"
+        webhook_url = f"https://api.telegram.org/bot{7387022581:AAHHSUoPhJnYMxtUI7rIu4NQKxQVkusW2Rg}/deleteWebhook"
         response = requests.post(webhook_url, timeout=10)
 
         if response.status_code == 200:
