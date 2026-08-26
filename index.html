@@ -234,6 +234,11 @@ h2.sec-title{font-size:clamp(38px,6vw,84px);font-weight:800;margin-bottom:54px}
 
 .seo-copy{min-height:auto;padding-top:120px;padding-bottom:120px}.seo-copy .work-note{max-width:820px;margin-top:22px}.seo-copy .work-note + .work-note{margin-top:18px}
 @media(max-width:720px){.seo-copy{padding-top:80px;padding-bottom:80px}.seo-copy .work-note{margin-top:20px}}
+
+/* Auto-hide header while scrolling down; reveal when scrolling up */
+nav{transition:transform .35s ease,opacity .35s ease}
+nav.nav-hidden{transform:translateY(-120%);opacity:0;pointer-events:none}
+@media(max-width:720px){nav.nav-hidden{transform:translateY(-120%);opacity:0}}
 </style>
 </head>
 <body>
@@ -392,6 +397,9 @@ if(menuToggle&&mobileMenu){
 }
 
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'})}));
+
+// Hide ADXPI / hamburger header while scrolling down, show it again when scrolling up
+(()=>{const nav=document.querySelector('nav');let lastY=window.scrollY,ticking=false;const update=()=>{const y=window.scrollY;if(Math.abs(y-lastY)>5){if(y>lastY&&y>20&&!document.body.classList.contains('menu-open'))nav.classList.add('nav-hidden');else if(y<lastY)nav.classList.remove('nav-hidden');lastY=y}ticking=false};window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(update);ticking=true}},{passive:true})})();
 </script>
 </body>
 </html>
